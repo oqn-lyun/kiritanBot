@@ -1,0 +1,11 @@
+version: '3'
+services:
+  node:
+    build: ./
+    working_dir: '/src'
+    tty: true
+    env_file: ./.env
+    environment: 
+      TZ: Asia/Tokyo
+    volumes:
+      - ./src:/src
