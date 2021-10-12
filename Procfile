@@ -1,1 +1,1 @@
-discordbot: python src/main.py
+kiritanbot: python src/main.py
