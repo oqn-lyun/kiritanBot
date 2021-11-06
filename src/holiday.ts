@@ -20,7 +20,7 @@ const searchNextHoliday = async (): Promise<Holiday | undefined> => {
     }
     const day = DateTime.fromFormat(holiday[0], "yyyy-MM-dd");
     const delta = day.diff(today, "days").days;
-    if (delta > 0) {
+    if (delta >= 0) {
       return { days: delta, date: holiday[0], name: holiday[1] };
     }
   }
