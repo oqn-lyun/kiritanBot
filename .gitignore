@@ -127,3 +127,7 @@ dist
 /build
 */__pycache__
 /srcpy
+*.bat
+.eslintrc
+*.zip
+j.txt
