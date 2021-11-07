@@ -7,5 +7,6 @@ services:
     env_file: ./.env
     environment: 
       TZ: Asia/Tokyo
+    privileged: true
     volumes:
       - ./:/packages
