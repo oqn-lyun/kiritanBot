@@ -5,13 +5,12 @@ const id = process.env.ID;
 
 export const sendMessage = async (message: string): Promise<void> => {
   if (!endpoint || !id) {
-    console.log("endpoint、idがありません");
-    return;
+    throw new Error("endpoint、idがありません");
   }
-  const params = {
+  const json = {
     text: `<${id}>${message}`,
   };
   await got.post(endpoint, {
-    json: params,
+    json,
   });
 };

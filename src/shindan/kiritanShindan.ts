@@ -1,8 +1,8 @@
 import Twitter from "twitter";
 import { Status } from "twitter-d";
 import { DateTime } from "luxon";
-import { sendMessage } from "./kiritanbot";
-import { getTwitterKeys } from "./twitterKeys";
+import { sendMessage } from "../bot/kiritanbot";
+import { getTwitterKeys } from "../twitterKeys";
 
 interface SearchResult {
   statuses: Status[];

@@ -1,7 +1,7 @@
 import got from "got";
 import { DateTime } from "luxon";
 import { string } from "io-ts";
-import { sendMessage } from "./kiritanbot";
+import { sendMessage } from "../bot/kiritanbot";
 
 interface Holiday {
   readonly days: number;

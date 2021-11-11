@@ -1,8 +1,8 @@
 import Twitter from "twitter";
 import { Status, MediaEntity } from "twitter-d";
-import { isFullUser } from "./Utils";
-import { sendMessage } from "./kiritanbot";
-import { getTwitterKeys } from "./twitterKeys";
+import { isFullUser } from "../Utils";
+import { sendMessage } from "../bot/kiritanbot";
+import { getTwitterKeys } from "../twitterKeys";
 sendMessage;
 
 const getVideoUrl = (media: MediaEntity): string | undefined => {
