@@ -1,13 +1,4 @@
-import {
-  type,
-  string,
-  number,
-  array,
-  TypeOf,
-  keyof,
-  union,
-  literal,
-} from "io-ts";
+import { type, string, number, array, TypeOf, union, literal } from "io-ts";
 
 export const wmoStrings = [
   "晴天",
