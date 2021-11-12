@@ -13,7 +13,6 @@ export const getOpenMeteoObject = async (): Promise<OpenMeteoObject> => {
 
   const res = await got(stringifyUrl({ url, query }, { encode: false }));
   const resbody = JSON.parse(res.body) as unknown;
-  console.log(resbody);
   if (!isOpenMeteoObject(resbody)) {
     throw new Error("invalid response");
   }
