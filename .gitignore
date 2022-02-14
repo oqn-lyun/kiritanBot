@@ -131,3 +131,4 @@ dist
 .eslintrc
 *.zip
 j.txt
+chromedriver
