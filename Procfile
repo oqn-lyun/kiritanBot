@@ -1,1 +1,0 @@
-kiritanbot: python src/main.py
