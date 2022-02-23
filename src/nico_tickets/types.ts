@@ -8,6 +8,7 @@ const ticketsResponse = type({
       type({
         ticketName: string,
         expiredAt: number,
+        ticketType: number,
       })
     ),
   }),

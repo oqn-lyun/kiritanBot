@@ -22,17 +22,19 @@ const makeMessage = (tickets?: TicketsResponse): string => {
   if (tickets.data.tickets.length === 0) {
     return "おにいたま チケットはありませんよ";
   }
-  let message = "おにいたま チケットがありますよ 忘れずに使い切ってくださいね";
-  for (const ticket of tickets.data.tickets) {
+  let message =
+    "おにいたま チケットがありますよ 忘れずに使い切ってくださいね\n<https://koken.nicovideo.jp/ticket|チケットはここにありますよ>";
+  for (const ticket of tickets.data.tickets.sort(
+    (a, b) => b.ticketType - a.ticketType
+  )) {
     const { ticketName, expiredAt } = ticket;
     const dulation = DateTime.fromSeconds(expiredAt)
       .endOf("day")
       .diff(DateTime.now().endOf("day"), "days").days;
-    const expire = DateTime.fromSeconds(expiredAt).toFormat("yyyy年LL月dd日");
     if (dulation === 0 || dulation === 1) {
       message += `\n・${ticketName} ${dulation === 0 ? "今日" : "明日"}まで`;
     } else {
-      message += `\n・${ticketName} あと${dulation}日  (有効期限${expire}まで)`;
+      message += `\n・${ticketName} あと${dulation}日`;
     }
   }
   return message;
